@@ -1,0 +1,52 @@
+#
+# Syntax highlighting for Aya, used by GitHub
+#
+
+scopeName: source.aya
+name: Aya
+fileTypes:
+- aya
+
+patterns:
+patterns:
+- # Line comments
+  begin: '--'
+  end: '$'
+  name: comment.line.double-dash.aya
+- # Block comments
+  begin: '{-'
+  end: '-}'
+  name: comment.block.aya
+- # Numeric literals
+  match: '-?\d+'
+  name: constant.numeric.aya
+- # Names of datatypes/struct/modules/constructors
+  match: '(data|struct|module|open|import|extends|new)[[:space:]]+([^:,;\\\(\){}@"[:space:]]+)'
+  captures:
+    '1':
+      name: keyword.other.aya
+    '2':
+      name: entity.name.type.aya
+- # Name of functions
+  match: '(def|prim)[[:space:]]+([^:;\\\(\){}@"[:space:]]+)'
+  captures:
+    '1':
+      name: keyword.other.aya
+    '2':
+      name: entity.name.aya
+- # Keywords (including bad keywords)
+  match: '(Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|ooType|Type|ooType|Set|Prop|as|public|private|using|hiding|coerce|erase|inline)'
+  name: keyword.other.aya
+- # Arrows & commas
+  match: '=>|->|,'
+  name: keyword.other.aya
+# - # Metavariables and prelude operators
+#   begin: '[ ,>{}\(\)]([_=@])[ \\{}\(\)]'
+#   captures:
+#     '1':
+#       name: keyword.other.aya
+- # String literals
+  begin: '"'
+  end: '"'
+  name: string.quoted.double.aya
+# End
