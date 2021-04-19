@@ -41,8 +41,17 @@ patterns:
       name: keyword.other.aya
     '2':
       name: entity.name.aya
-- # Keywords
-  match: '(open|Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|ooType|Type|ooType|Set|Prop|as|public|private|using|hiding|coerce|erase|inline)'
+- # Generalize
+  match: '(variable)[[:space:]]+(([^:,;\\\(\){}@"[:space:]]+([[:space:]]*,[[:space:]]*)?)+)[[:space:]]*\:[[:space:]]*([^:,;\\\(\){}@"[:space:]]+)'
+  captures:
+    '1':
+      name: keyword.other.aya
+    '2':
+      name: entity.name.aya
+    '5':
+      name: entity.name.type.aya
+- # Other keywords
+  match: '(bind|looser|tighter|open|Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|hlevel|ulevel|ooType|Type|ooType|Set|uSet|Prop|as|public|private|using|hiding|coerce|erase|inline)'
   name: keyword.other.aya
 - # Arrows & commas
   match: '=>|->|,'
