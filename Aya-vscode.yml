@@ -2,7 +2,7 @@
 # Syntax highlighting for Aya, used by GitHub
 #
 
-scopeName: source.aya
+scopeName: source.minimal-aya
 name: Aya
 fileTypes:
 - aya
