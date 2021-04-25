@@ -1,0 +1,45 @@
+#
+# Syntax highlighting for Aya, used by GitHub
+#
+
+scopeName: source.aya
+name: Aya
+fileTypes:
+- aya
+
+patterns:
+patterns:
+- # Line comments
+  begin: '--'
+  end: '$'
+  name: comment.line.double-dash.aya
+- # Block comments
+  begin: '{-'
+  end: '-}'
+  name: comment.block.aya
+- # Names of datatypes/struct/constructors
+  match: '(data|struct|extends|new)'
+  name: keyword.other.aya
+- # Names of module/import
+  match: '(open|module|import)'
+  name: keyword.other.aya
+- # Name of functions
+  match: '(def|prim)'
+  name: keyword.other.aya
+- # Generalize
+  match: '(variable)'
+  name: keyword.other.aya
+- # Other keywords
+  match: '\b(bind|looser|tighter|open|Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|hlevel|ulevel|ooType|Type|ooType|Set|Prop|as|public|private|using|hiding|coerce|erase|inline)\b'
+  name: keyword.other.aya
+- # Arrows & commas
+  match: '=>|->|,'
+  name: keyword.other.aya
+- # String literals
+  begin: '"'
+  end: '"'
+  name: string.quoted.double.aya
+- # Numeric literals
+  match: '\b-?\d+\b'
+  name: constant.numeric.aya
+# End
