@@ -1,5 +1,7 @@
 #
-# Syntax highlighting for Aya, used by GitHub
+# GENERATED FROM AyaLexer.g4
+# Syntax highlighting for Aya, used by VSCode.
+# This file contains only keywords, because we use semantic highlighting through LSP.
 #
 
 scopeName: source.minimal-aya
@@ -7,7 +9,6 @@ name: Aya
 fileTypes:
 - aya
 
-patterns:
 patterns:
 - # Line comments
   begin: '--'
@@ -17,20 +18,8 @@ patterns:
   begin: '{-'
   end: '-}'
   name: comment.block.aya
-- # Names of datatypes/struct/constructors
-  match: '(data|struct|extends|new)'
-  name: keyword.other.aya
-- # Names of module/import
-  match: '(open|module|import)'
-  name: keyword.other.aya
-- # Name of functions
-  match: '(def|prim)'
-  name: keyword.other.aya
-- # Generalize
-  match: '(variable)'
-  name: keyword.other.aya
-- # Other keywords
-  match: '\b(example|counterexample|bind|looser|tighter|open|Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|hlevel|ulevel|ooType|Type|ooType|Set|Prop|as|public|private|using|hiding|coerce|erase|inline)\b'
+- # Keywords
+  match: '\b(impossible|extends|prim|new|module|abusing|forall|tighter|import|variable|infix|inline|Type|infixr|lsuc|infixl|def|counterexample|open|private|lmax|\\|using|as|universe|erase|coerce|data|bind|Sig|public|Pi|looser|example|struct|hiding|match)\b'
   name: keyword.other.aya
 - # Arrows & commas
   match: '=>|->|,'
@@ -43,3 +32,4 @@ patterns:
   match: '\b-?\d+\b'
   name: constant.numeric.aya
 # End
+    

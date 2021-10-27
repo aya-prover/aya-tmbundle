@@ -8,7 +8,6 @@ fileTypes:
 - aya
 
 patterns:
-patterns:
 - # Line comments
   begin: '--'
   end: '$'
