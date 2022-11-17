@@ -31,11 +31,13 @@ patterns:
     '2':
       name: support.other
 - # Name of functions
-  match: '(def|prim)[[:space:]]+([^:;\\\(\){}@"[:space:]]+)'
+  match: '(def|prim)[[:space:]]+(inline|opaque)?[[:space:]]+([^:;\\\(\){}@"[:space:]]+)'
   captures:
     '1':
       name: keyword.other.aya
-    '2':
+    '1':
+      name: keyword.other.aya
+    '3':
       name: entity.name.function.aya
 - # Generalize
   match: '(variable)[[:space:]]+(([^:,;\\\(\){}@"[:space:]]+([[:space:]]*,[[:space:]]*)?)+)[[:space:]]*\:[[:space:]]*([^:,;\\\(\){}@"[:space:]]+)'
@@ -47,10 +49,13 @@ patterns:
     '5':
       name: entity.name.type.aya
 - # Other keywords
-  match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|\\|match|infix|infixl|infixr|fixl|fixr|twin|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
+  match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|match|infix|infixl|infixr|fixl|fixr|twin|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
   name: keyword.other.aya
-- # Arrows & commas
-  match: '=>|->|,|:=|**|\|'
+- # Space-sensitive symbols
+  match: '\b(=>|->|:=|**)\b'
+  name: keyword.other.aya
+- # Space-insensitive symbols
+  match: ',|\\|\|'
   name: keyword.other.aya
 - # String literals
   begin: '"'
