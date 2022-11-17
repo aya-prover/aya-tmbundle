@@ -9,12 +9,12 @@ fileTypes:
 
 patterns:
 - # Line comments
-  begin: '--'
+  begin: '//'
   end: '$'
   name: comment.line.double-dash.aya
 - # Block comments
-  begin: '{-'
-  end: '-}'
+  begin: '/*'
+  end: '*/'
   name: comment.block.aya
 - # Names of datatypes/struct/constructors
   match: '(data|open[[:space:]]+data|struct|extends|new)[[:space:]]+([^:,;\\\(\){}@"[:space:]]+)'
@@ -47,10 +47,10 @@ patterns:
     '5':
       name: entity.name.type.aya
 - # Other keywords
-  match: '\b(example|counterexample|bind|looser|tighter|open|Sig|Pi|\\|match|impossible|abusing|infix|infixl|infixr|fixl|fixr|fix|twin|hType|uType|hlevel|ulevel|ooType|Type|ooType|Set|Prop|as|public|private|using|hiding|coerce|erase|inline)\b'
+  match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|\\|match|infix|infixl|infixr|fixl|fixr|twin|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
   name: keyword.other.aya
 - # Arrows & commas
-  match: '=>|->|,'
+  match: '=>|->|,|:=|**|\|'
   name: keyword.other.aya
 - # String literals
   begin: '"'

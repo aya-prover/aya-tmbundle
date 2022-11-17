@@ -11,18 +11,18 @@ fileTypes:
 
 patterns:
 - # Line comments
-  begin: '--'
+  begin: '//'
   end: '$'
   name: comment.line.double-dash.aya
 - # Block comments
-  begin: '{-'
-  end: '-}'
+  begin: '/*'
+  end: '*/'
   name: comment.block.aya
 - # Keywords
-  match: '\b(impossible|extends|prim|new|module|abusing|forall|tighter|import|variable|infix|inline|Type|infixr|lsuc|infixl|def|counterexample|open|private|lmax|\\|using|as|universe|erase|coerce|data|bind|Sig|public|Pi|looser|example|struct|hiding|match)\b'
+  match: '\b(extends|prim|new|module|forall|tighter|import|variable|infix|inline|Type|Set|Prop|ISet|infixr|infixl|fixl|fixr|def|counterexample|open|private|\\|using|as|coerce|data|Sig|public|Pi|looser|example|struct|hiding|match)\b'
   name: keyword.other.aya
-- # Arrows & commas
-  match: '=>|->|,'
+- # Symbol keywords
+  match: '=>|->|,|:=|**|\|'
   name: keyword.other.aya
 - # String literals
   begin: '"'
