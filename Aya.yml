@@ -55,7 +55,7 @@ patterns:
   match: '=>|->|:=|\*\*|\|'
   name: keyword.other.aya
 - # Space-insensitive symbols
-  match: ',|\\'
+  match: ',|\\|↑|Σ|λ|Π|∀|→|←|⇒|⦇|⦈|⦃|⦄|⟦|⟧'
   name: keyword.other.aya
 - # String literals
   begin: '"'
