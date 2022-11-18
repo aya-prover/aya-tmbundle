@@ -15,8 +15,8 @@ patterns:
   end: '$'
   name: comment.line.double-dash.aya
 - # Block comments
-  begin: '/*'
-  end: '*/'
+  begin: '/\*'
+  end: '\*/'
   name: comment.block.aya
 - # Keywords
   match: '\b(extends|prim|new|module|forall|tighter|import|variable|infix|inline|Type|Set|Prop|ISet|infixr|infixl|fixl|fixr|def|counterexample|open|private|\\|using|as|coerce|data|Sig|public|Pi|looser|example|struct|hiding|match)\b'
