@@ -52,7 +52,7 @@ patterns:
   match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|match|infix|infixl|infixr|fixl|fixr|twin|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
   name: keyword.other.aya
 - # Space-sensitive symbols
-  match: '\b(=>|->|:=|**)\b'
+  match: '\b(=>|->|:=|\*\*)\b'
   name: keyword.other.aya
 - # Space-insensitive symbols
   match: ',|\\|\|'
