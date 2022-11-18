@@ -19,13 +19,13 @@ patterns:
   end: '\*/'
   name: comment.block.aya
 - # Keywords
-  match: '\b(extends|prim|new|module|forall|tighter|import|variable|infix|inline|Type|Set|Prop|ISet|infixr|infixl|fixl|fixr|def|counterexample|open|private|\\|using|as|coerce|data|Sig|public|Pi|looser|example|struct|hiding|match)\b'
+  match: '\b(extends|prim|new|module|forall|tighter|import|variable|infix|overlap|inline|Type|Set|Prop|ISet|infixr|infixl|fixl|fixr|def|counterexample|open|private|using|as|coerce|data|Sig|public|Pi|looser|example|struct|hiding|match)\b'
   name: keyword.other.aya
 - # Space-sensitive symbols
-  match: '\b(=>|->|:=|\*\*)\b'
+  match: '=>|->|:=|\*\*|\|'
   name: keyword.other.aya
 - # Space-insensitive symbols
-  match: ',|\\|\|'
+  match: ',|\\'
   name: keyword.other.aya
 - # String literals
   begin: '"'
@@ -35,4 +35,3 @@ patterns:
   match: '\b-?\d+\b'
   name: constant.numeric.aya
 # End
-    

@@ -31,7 +31,7 @@ patterns:
     '2':
       name: support.other
 - # Name of functions
-  match: '(def|prim)[[:space:]]+(inline|opaque)?[[:space:]]+([^:;\\\(\){}@"[:space:]]+)'
+  match: '(def|prim)[[:space:]]+(inline|opaque|overlap)?[[:space:]]+([^:;\\\(\){}@"[:space:]]+)'
   captures:
     '1':
       name: keyword.other.aya
@@ -49,13 +49,13 @@ patterns:
     '5':
       name: entity.name.type.aya
 - # Other keywords
-  match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|match|infix|infixl|infixr|fixl|fixr|twin|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
+  match: '\b(example|counterexample|looser|tighter|open|Sig|Pi|match|infix|infixl|infixr|fixl|fixr|Type|Set|Prop|ISet|as|public|private|using|hiding|coerce|inline)\b'
   name: keyword.other.aya
 - # Space-sensitive symbols
-  match: '\b(=>|->|:=|\*\*)\b'
+  match: '=>|->|:=|\*\*|\|'
   name: keyword.other.aya
 - # Space-insensitive symbols
-  match: ',|\\|\|'
+  match: ',|\\'
   name: keyword.other.aya
 - # String literals
   begin: '"'
